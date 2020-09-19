@@ -13,7 +13,7 @@ def travels_choice(travels)
 end
 
 
-print "旅行プランを選択して下さい> "
+puts "旅行プランを選択して下さい> "
 
 travels = [
             {name:"沖縄旅行", price:10000},
