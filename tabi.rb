@@ -5,7 +5,12 @@ def plan(travels)
    end
 end
 
-
+def travels_choice(travels)
+   travels_selected_num = gets.to_i
+   travels_menu = travels[travels_selected_num - 1]    
+   puts "#{travels_menu[:name]}ですね, 何人で行きますか？"  
+   travels_menu
+end
 
 
 puts "旅行プランを選択して下さい"
@@ -18,17 +23,11 @@ travels = [
 
  plan(travels)
 
-puts "プランを選択 >"
+print "プランを選択 >"
 
-def travels_choice(travels)
-   travels_selected_num = gets.to_i
-   travels_menu = travels[travels_selected_num - 1]    
-   puts "#{travels_menu[:name]}ですね, 何人で行きますか？"  
-end
+travels_menu = travels_choice(travels)
 
-travels_choice(travels)
-
- puts "人数を入力 >"
+print "人数を入力 >"
  
    people_selected_num = gets.to_i
 
