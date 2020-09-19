@@ -13,7 +13,7 @@ def travels_choice(travels)
 end
 
 
-puts "旅行プランを選択して下さい"
+print "旅行プランを選択して下さい> "
 
 travels = [
             {name:"沖縄旅行", price:10000},
@@ -23,21 +23,21 @@ travels = [
 
  plan(travels)
 
-print "プランを選択 >"
+print "プランを選択 > "
 
 travels_menu = travels_choice(travels)
 
-print "人数を入力 >"
+print "人数を入力 > "
  
-   people_selected_num = gets.to_i
+people_selected_num = gets.to_i
 
-   if people_selected_num >= 5
-      sale_price = travels_menu[:price]-travels_menu[:price]/10
-      sum = sale_price*people_selected_num     
-      puts "5人以上なので10%割引になります"
-      puts "合計金額:¥#{sum}" 
-   else
-      sum = travels_menu[:price]*people_selected_num  
-      puts "合計金額:¥#{sum}" 
-   end
+if people_selected_num >= 5
+   sale_price = travels_menu[:price]-travels_menu[:price]/10
+   sum = sale_price*people_selected_num     
+   puts "5人以上なので10%割引になります"
+   puts "合計金額:¥#{sum}" 
+else
+   sum = travels_menu[:price]*people_selected_num  
+   puts "合計金額:¥#{sum}" 
+end
   
